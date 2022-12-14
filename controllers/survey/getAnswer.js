@@ -10,9 +10,7 @@ const getAnswerToSurvey = async (req, res) => {
             page: req.query.page || 1,
             limit: req.query.limit || process.env.PAGING_LIMIT,
             sort: { _id: -1 },
-            // populate: {
-            //     path: 'questionId'
-            // }
+            
         };
         if(!survey){
             res.status(StatusCodes.NOT_FOUND).json({
@@ -29,19 +27,6 @@ const getAnswerToSurvey = async (req, res) => {
             surveyId: surveyId
         }, option);
 
-        // get all questionsId from result
-        // const questionsId = result.docs.map((item) => {
-        //     return item.answers.map((answer) => {
-        //         // console.log(answer.questionId);
-        //         return answer.questionId;
-        //     })
-        // })
-
-
-        //get all questionsId from survey
-        // const surveyQuestionsId = survey.questions.map((item) => {
-        //     return item._id;
-        // })
 
         res.status(StatusCodes.OK).json({
             status: StatusCodes.OK,
