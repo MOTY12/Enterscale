@@ -1,0 +1,51 @@
+{
+  "name": "checkviz-backend",
+  "version": "1.0.0",
+  "description": "visitor management system",
+  "main": "app.js",
+  "engines": {
+    "node": "18.7"
+  },
+  "scripts": {
+    "build": "babel app.js --out-dir build",
+    "dev": "nodemon --exec babel-node app.js",
+    "start": "nodemon --exec babel-node app.js",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=lcov",
+    "test-coverage-report": "npm run coverage && npm run report && npm run coveralls",
+    "test": "nyc --reporter=html --reporter=text mocha --require @babel/register --recursive --no-timeout --exit test/*js || true",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": "git+https://github.com/Aceallio/VMS.git",
+  "author": "Mukhtar yusuf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aceallio/VMS/issues"
+  },
+  "homepage": "https://github.com/Aceallio/VMS#readme",
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/node": "^7.20.2",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "babel-eslint": "^10.1.0",
+    "bcrypt": "^5.1.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^10.1.0",
+    "mongoose": "^6.7.2",
+    "mongoose-paginate-v2": "^1.7.1",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
+    "twilio": "^3.83.2",
+    "uuid": "^9.0.0"
+  }
+}
