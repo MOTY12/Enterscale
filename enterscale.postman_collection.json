@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "67915011-2b84-40f7-aef4-4614f695e7c1",
+		"name": "enterscale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22984051"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"Mukhtarapril2000@gmail.com\",\n    \"password\": \"Mukhtar2944\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Mukhtarapril2000@gmail.com\",\n    \"password\": \"Mukhtar2944\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "645"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"285-U/JzDJilj0AIWxNpkX8JmqHbZzU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 22:14:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"638493810d6344232da23b80\",\n        \"name\": \"mukhtar Yusuf\",\n        \"email\": \"Mukhtarapril2000@gmail.com\",\n        \"company\": \"Aceall\",\n        \"logOut\": false,\n        \"isDeleted\": false,\n        \"password\": \"$2b$10$4wOo8b1Rs1B3gfLhSWC86uWC5sbcacHTT4TCKT7RTVQWgfccI/aVm\",\n        \"isAdmin\": false,\n        \"createdAt\": \"2022-11-28T10:54:53.011Z\",\n        \"updatedAt\": \"2022-11-28T10:54:53.011Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODQ5MzgxMGQ2MzQ0MjMyZGEyM2I4MCIsImlzQWRtaW4iOmZhbHNlLCJjb21wYW55IjoiQWNlYWxsIiwiZW1haWwiOiJNdWtodGFyYXByaWwyMDAwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDk2OTY3NywiZXhwIjo4NjQwMDAxNjcwOTY5Njc3fQ.9uzU8QZjl60HTkJ36xhUaqv0sukTnCGlV81C876cQ2U\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create account  for admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"moty\",\n    \"email\": \"Mukhtarapril2000@gmail.com\",\n    \"company\": \"enterscale\",\n    \"password\": \"Mukhtar2944\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/createAdmin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"createAdmin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "existing account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"moty\",\n    \"email\": \"Mukhtarapril2000@gmail.com\",\n    \"company\": \"enterscale\",\n    \"password\": \"Mukhtar2944\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/createAdmin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"createAdmin"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "77"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4d-GSrbR95ASzkixrCjdS85r98IkO0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 22:12:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Admin has already been been created\",\n    \"status\": 400,\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "create survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODQ5MzgxMGQ2MzQ0MjMyZGEyM2I4MCIsImlzQWRtaW4iOmZhbHNlLCJjb21wYW55IjoiQWNlYWxsIiwiZW1haWwiOiJNdWtodGFyYXByaWwyMDAwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDk5OTMxMSwiZXhwIjo4NjQwMDAxNjcwOTk5MzExfQ.BWdKrla5kxVBKF-oSPx1KeF5hfyAO14zZ12F2HljsdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"moty\",\n    \"description\": \"moty yuy\",\n    \"questions\": [{\n        \"question\": \"what is you name\"\n    },\n    {\n        \"question\": \"what your view to our product\"\n    },\n    {\n        \"question\": \"how do you think we can make it better\"\n    },\n    {\n        \"question\": \"why do you choose us\"\n    }\n\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/createsurvey",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"createsurvey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all answer to survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODQ5MzgxMGQ2MzQ0MjMyZGEyM2I4MCIsImlzQWRtaW4iOmZhbHNlLCJjb21wYW55IjoiQWNlYWxsIiwiZW1haWwiOiJNdWtodGFyYXByaWwyMDAwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDk5OTMxMSwiZXhwIjo4NjQwMDAxNjcwOTk5MzExfQ.BWdKrla5kxVBKF-oSPx1KeF5hfyAO14zZ12F2HljsdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/getAnswerToSurvey/6399b903fbe4e9173e06e5de",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"getAnswerToSurvey",
+						"6399b903fbe4e9173e06e5de"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all answer to survey",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getAnswerToSurvey/6399b903fbe4e9173e06e5de",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getAnswerToSurvey",
+								"6399b903fbe4e9173e06e5de"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c37-ov/gjs0Vy88XY3dUMqLMVnMkgNk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Dec 2022 13:55:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"docs\": [\n            {\n                \"_id\": \"6399bf22f26f23219135d661\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bf22f26f23219135d662\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bf22f26f23219135d663\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bf22f26f23219135d664\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bf22f26f23219135d665\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:18:38.711Z\",\n                \"updatedAt\": \"2022-12-14T12:18:38.711Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399bee212b421c7baeb851f\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bee212b421c7baeb8520\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bee212b421c7baeb8521\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bee212b421c7baeb8522\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bee212b421c7baeb8523\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:16:21.627Z\",\n                \"updatedAt\": \"2022-12-14T12:16:21.627Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399be67409eed5dcafa63a1\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399be67409eed5dcafa63a2\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399be67409eed5dcafa63a3\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399be67409eed5dcafa63a4\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399be67409eed5dcafa63a5\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:15:33.256Z\",\n                \"updatedAt\": \"2022-12-14T12:15:33.256Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399be4ed663fe4f9b1dfa27\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399be4ed663fe4f9b1dfa28\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399be4ed663fe4f9b1dfa29\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399be4ed663fe4f9b1dfa2a\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399be4ed663fe4f9b1dfa2b\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:15:01.187Z\",\n                \"updatedAt\": \"2022-12-14T12:15:01.187Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399be4cd663fe4f9b1dfa1a\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399be4cd663fe4f9b1dfa1b\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399be4cd663fe4f9b1dfa1c\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399be4cd663fe4f9b1dfa1d\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399be4cd663fe4f9b1dfa1e\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:15:01.187Z\",\n                \"updatedAt\": \"2022-12-14T12:15:01.187Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399bd7cd60f106db9ec598f\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bd7cd60f106db9ec5990\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bd7cd60f106db9ec5991\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bd7cd60f106db9ec5992\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bd7cd60f106db9ec5993\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:11:30.080Z\",\n                \"updatedAt\": \"2022-12-14T12:11:30.080Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399bd62be4cd74c79676e0a\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bd62be4cd74c79676e0b\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bd62be4cd74c79676e0c\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bd62be4cd74c79676e0d\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bd62be4cd74c79676e0e\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:11:11.281Z\",\n                \"updatedAt\": \"2022-12-14T12:11:11.281Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399bd3bf82b8724c62b5fb1\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bd3bf82b8724c62b5fb2\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bd3bf82b8724c62b5fb3\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bd3bf82b8724c62b5fb4\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bd3bf82b8724c62b5fb5\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:10:27.379Z\",\n                \"updatedAt\": \"2022-12-14T12:10:27.379Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399bd36f82b8724c62b5fa4\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bd36f82b8724c62b5fa5\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bd36f82b8724c62b5fa6\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bd36f82b8724c62b5fa7\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bd36f82b8724c62b5fa8\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:10:27.379Z\",\n                \"updatedAt\": \"2022-12-14T12:10:27.379Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6399bd26334e5fa0f56a2034\",\n                \"fullName\": \"mukhtar yusuf\",\n                \"email\": \"Mukhtar2944@gmail.com\",\n                \"answers\": [\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                        \"answer\": \"moty\",\n                        \"_id\": \"6399bd26334e5fa0f56a2035\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                        \"answer\": \"one of the best product have used\",\n                        \"_id\": \"6399bd26334e5fa0f56a2036\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                        \"answer\": \"the better ways is to keep to quality \",\n                        \"_id\": \"6399bd26334e5fa0f56a2037\"\n                    },\n                    {\n                        \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                        \"answer\": \"because it a product with quality\",\n                        \"_id\": \"6399bd26334e5fa0f56a2038\"\n                    }\n                ],\n                \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n                \"isDeleted\": false,\n                \"createdAt\": \"2022-12-14T12:10:05.729Z\",\n                \"updatedAt\": \"2022-12-14T12:10:05.729Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalDocs\": 13,\n        \"limit\": 10,\n        \"totalPages\": 2,\n        \"page\": 1,\n        \"pagingCounter\": 1,\n        \"hasPrevPage\": false,\n        \"hasNextPage\": true,\n        \"prevPage\": null,\n        \"nextPage\": 2\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "survey answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"mukhtar yusuf\",\n    \"email\": \"Mukhtar2944@gmail.com\",\n    \"answers\": [\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5df\",\n            \"answer\": \"moty\"\n        },\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n            \"answer\": \"one of the best product have used\"\n        },\n         {\n            \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n            \"answer\": \"the better ways is to keep to quality \"\n        },\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n            \"answer\": \"because it a product with quality\"\n        }\n    \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/answerQuestions/6399b903fbe4e9173e06e5de",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"answerQuestions",
+						"6399b903fbe4e9173e06e5de"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success survey answer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"mukhtar yusuf\",\n    \"email\": \"Mukhtar2944@gmail.com\",\n    \"answers\": [\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5df\",\n            \"answer\": \"moty\"\n        },\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n            \"answer\": \"one of the best product have used\"\n        },\n         {\n            \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n            \"answer\": \"the better ways is to keep to quality \"\n        },\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n            \"answer\": \"because it a product with quality\"\n        }\n    \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/answerQuestions/6399b903fbe4e9173e06e5de",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"answerQuestions",
+								"6399b903fbe4e9173e06e5de"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "740"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e4-u/+8VFLR2hcccqIhMrHOTA4qUWA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Dec 2022 12:01:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"fullName\": \"mukhtar yusuf\",\n        \"email\": \"Mukhtar2944@gmail.com\",\n        \"answers\": [\n            {\n                \"questionId\": \"6399b903fbe4e9173e06e5df\",\n                \"answer\": \"moty\",\n                \"_id\": \"6399bb2ae3159b31270a8c94\"\n            },\n            {\n                \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n                \"answer\": \"one of the best product have used\",\n                \"_id\": \"6399bb2ae3159b31270a8c95\"\n            },\n            {\n                \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n                \"answer\": \"the better ways is to keep to quality \",\n                \"_id\": \"6399bb2ae3159b31270a8c96\"\n            },\n            {\n                \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n                \"answer\": \"because it a product with quality\",\n                \"_id\": \"6399bb2ae3159b31270a8c97\"\n            }\n        ],\n        \"surveyId\": \"6399b903fbe4e9173e06e5de\",\n        \"isDeleted\": false,\n        \"createdAt\": \"2022-12-14T12:01:41.505Z\",\n        \"updatedAt\": \"2022-12-14T12:01:41.505Z\",\n        \"_id\": \"6399bb2ae3159b31270a8c93\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "already submit survey answer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"mukhtar yusuf\",\n    \"email\": \"Mukhtar2e9444@gmail.com\",\n    \"answers\": [\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5df\",\n            \"answer\": \"moty\"\n        },\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5e0\",\n            \"answer\": \"one of the best product have used\"\n        },\n         {\n            \"questionId\": \"6399b903fbe4e9173e06e5e1\",\n            \"answer\": \"the better ways is to keep to quality \"\n        },\n        {\n            \"questionId\": \"6399b903fbe4e9173e06e5e2\",\n            \"answer\": \"because it a product with quality\"\n        }\n    \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/answerQuestions/6399b903fbe4e9173e06e5de",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"answerQuestions",
+								"6399b903fbe4e9173e06e5de"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-iTsNQWofFGKwxypE+J40TNAgIZc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Dec 2022 12:49:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"You have already answered this survey\"\n}"
+				}
+			]
+		}
+	]
+}
