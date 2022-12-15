@@ -326,7 +326,124 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "create survey",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"moty\",\n    \"description\": \"moty yuy\",\n    \"questions\": [{\n        \"question\": \"what is you name\"\n    },\n    {\n        \"question\": \"what your view to our product\"\n    },\n    {\n        \"question\": \"how do you think we can make it better\"\n    },\n    {\n        \"question\": \"why do you choose us\"\n    }\n\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/createsurvey",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"createsurvey"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "605"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25d-w70D06YCU0U1OB8WD4OJ2QJ1fnk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Dec 2022 04:05:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 201,\n    \"success\": true,\n    \"data\": {\n        \"title\": \"moty\",\n        \"companyId\": \"638493810d6344232da23b80\",\n        \"questions\": [\n            {\n                \"question\": \"what is you name\",\n                \"_id\": \"639a9d0c2a373e2764e941a3\"\n            },\n            {\n                \"question\": \"what your view to our product\",\n                \"_id\": \"639a9d0c2a373e2764e941a4\"\n            },\n            {\n                \"question\": \"how do you think we can make it better\",\n                \"_id\": \"639a9d0c2a373e2764e941a5\"\n            },\n            {\n                \"question\": \"why do you choose us\",\n                \"_id\": \"639a9d0c2a373e2764e941a6\"\n            }\n        ],\n        \"isDeleted\": false,\n        \"createdAt\": \"2022-12-15T04:05:03.762Z\",\n        \"updatedAt\": \"2022-12-15T04:05:03.762Z\",\n        \"_id\": \"639a9d0c2a373e2764e941a2\",\n        \"__v\": 0\n    },\n    \"link\": \"http://localhost:3000/survey/639a9d0c2a373e2764e941a2\"\n}"
+				}
+			]
 		},
 		{
 			"name": "get all answer to survey",
@@ -724,6 +841,280 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"You have already answered this survey\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get a survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODQ5MzgxMGQ2MzQ0MjMyZGEyM2I4MCIsImlzQWRtaW4iOmZhbHNlLCJjb21wYW55IjoiQWNlYWxsIiwiZW1haWwiOiJNdWtodGFyYXByaWwyMDAwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDk5OTMxMSwiZXhwIjo4NjQwMDAxNjcwOTk5MzExfQ.BWdKrla5kxVBKF-oSPx1KeF5hfyAO14zZ12F2HljsdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/getSurvey/6399b903fbe4e9173e06e5de",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"getSurvey",
+						"6399b903fbe4e9173e06e5de"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successful get a survey",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getSurvey/6399b903fbe4e9173e06e5de",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getSurvey",
+								"6399b903fbe4e9173e06e5de"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "802"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"322-j9rDVrDTslIbHeg6XAbNexHdKQU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Dec 2022 04:36:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"6399b903fbe4e9173e06e5de\",\n        \"title\": \"moty\",\n        \"companyId\": \"638493810d6344232da23b80\",\n        \"questions\": [\n            {\n                \"question\": \"what is you name\",\n                \"questionId\": \"271373e7-6a77-4e5d-bafc-d7345214962a\",\n                \"_id\": \"6399b903fbe4e9173e06e5df\",\n                \"answers\": []\n            },\n            {\n                \"question\": \"what your view to our product\",\n                \"questionId\": \"271373e7-6a77-4e5d-bafc-d7345214962a\",\n                \"_id\": \"6399b903fbe4e9173e06e5e0\",\n                \"answers\": []\n            },\n            {\n                \"question\": \"how do you think we can make it better\",\n                \"questionId\": \"271373e7-6a77-4e5d-bafc-d7345214962a\",\n                \"_id\": \"6399b903fbe4e9173e06e5e1\",\n                \"answers\": []\n            },\n            {\n                \"question\": \"why do you choose us\",\n                \"questionId\": \"271373e7-6a77-4e5d-bafc-d7345214962a\",\n                \"_id\": \"6399b903fbe4e9173e06e5e2\",\n                \"answers\": []\n            }\n        ],\n        \"isDeleted\": false,\n        \"createdAt\": \"2022-12-14T11:52:27.839Z\",\n        \"updatedAt\": \"2022-12-14T11:52:27.839Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "generate link to survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODQ5MzgxMGQ2MzQ0MjMyZGEyM2I4MCIsImlzQWRtaW4iOmZhbHNlLCJjb21wYW55IjoiQWNlYWxsIiwiZW1haWwiOiJNdWtodGFyYXByaWwyMDAwQGdtYWlsLmNvbSIsImlhdCI6MTY3MDk5OTMxMSwiZXhwIjo4NjQwMDAxNjcwOTk5MzExfQ.BWdKrla5kxVBKF-oSPx1KeF5hfyAO14zZ12F2HljsdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/generateLinkForSurvey/6399b903fbe4e9173e06e5de",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"generateLinkForSurvey",
+						"6399b903fbe4e9173e06e5de"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "generate link to survey",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/generateLinkForSurvey/6399b903fbe4e9173e06e5de",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"generateLinkForSurvey",
+								"6399b903fbe4e9173e06e5de"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-bC6IIYQVI6QGoA3p2i2fKNEn1tk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Dec 2022 04:39:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"link\": \"http://localhost:8000/api/v1/getSurvey/6399b903fbe4e9173e06e5de\"\n}"
 				}
 			]
 		}

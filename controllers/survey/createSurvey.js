@@ -1,6 +1,8 @@
 import { surveyModel } from "../../middleware/dbConnect";
 import { StatusCodes } from "http-status-codes";
 
+let link = process.env.FRONTEND_URL;
+
 const createSurvey = async (req, res) => {
     try {
       const companyId = req.user.id;
@@ -20,7 +22,10 @@ const createSurvey = async (req, res) => {
             questions,
         });
 
-        const link = `http://localhost:3000/survey/${newSurvey._id}`;
+        let base_url = process.env.FRONTEND_URL;
+        
+        const link= `${base_url}/getSurvey/${survey._id}`;
+       
         // newSurvey.link = link;
 
         await newSurvey.save();
@@ -53,7 +58,10 @@ const generateLink = async (req, res) => {
             })
             return;
         }
-        const link = `http://localhost:3000/survey/${survey._id}`;
+
+        let base_url = process.env.FRONTEND_URL;
+
+        const link= `${base_url}/getSurvey/${survey._id}`;
         res.status(StatusCodes.OK).json({
             status: StatusCodes.OK,
             success: true,
@@ -66,4 +74,7 @@ const generateLink = async (req, res) => {
 }
 
 
-export default createSurvey;
+module.exports = {
+    createSurvey,
+    generateLink
+}
