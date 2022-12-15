@@ -1,7 +1,7 @@
 {
-  "name": "checkviz-backend",
+  "name": "Enterscale",
   "version": "1.0.0",
-  "description": "visitor management system",
+  "description": "backend test",
   "main": "app.js",
   "engines": {
     "node": "18.7"
